@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+.professor-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.professor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #3cbb70 0%, #2ba5a0 100%);
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.professor-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.professor-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.professor-info h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.professor-info p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.professor-logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.professor-logout-btn:hover {
+  background: white;
+  color: #667eea;
+}
+
+/* Container */
+.professor-container {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: calc(100vh - 100px);
+}
+
+/* Sidebar */
+.professor-sidebar {
+  width: 250px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.professor-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background: #f0f0f0;
+  color: #3cbb70;
+}
+
+.nav-item.active {
+  background: #f0f8ff;
+  color: #3cbb70;
+  border-left-color: #3cbb70;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+.nav-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Main Content */
+.professor-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .professor-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .professor-header-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .professor-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .professor-sidebar {
+    width: 100%;
+  }
+
+  .professor-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-item {
+    white-space: nowrap;
+    padding: 10px 15px;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-item.active .nav-text,
+  .nav-item:hover .nav-text {
+    display: inline;
+  }
+
+  .professor-main {
+    padding: 15px;
+  }
+}

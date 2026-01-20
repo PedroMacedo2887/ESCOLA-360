@@ -1,0 +1,204 @@
+/* Fundo geral com gradiente da brand do logo - Verde, Turquesa e Navy */
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3CBB70 0%, #2BA5A0 50%, #1B3A52 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeitos decorativos de fundo */
+.home-container::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  top: -200px;
+  left: -200px;
+  z-index: 1;
+}
+
+.home-container::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  bottom: -150px;
+  right: -150px;
+  z-index: 1;
+}
+
+/* Card central com sombra sofisticada */
+.home-card {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(59, 187, 112, 0.35);
+  animation: slideUp 0.6s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.home-logo {
+  width: clamp(80px, 22vw, 120px);
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.2));
+}
+
+.home-title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+/* Título "Escolha uma opção" */
+.select-title {
+  font-size: clamp(14px, 3vw, 16px);
+  margin: 24px 0 28px 0;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.3px;
+}
+
+/* Grid de botões */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 4vw, 20px);
+  margin-top: 16px;
+}
+
+/* Botão com design moderno que combina com a brand */
+.option-btn {
+  background: linear-gradient(135deg, #3CBB70 0%, #2BA5A0 100%);
+  color: #ffffff;
+  padding: clamp(16px, 4vw, 22px);
+  border-radius: 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(59, 187, 112, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.option-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.option-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(59, 187, 112, 0.5);
+}
+
+.option-btn:hover::before {
+  left: 100%;
+}
+
+.option-btn:active {
+  transform: scale(0.96);
+}
+
+/* Ícone com animação */
+.option-icon {
+  font-size: clamp(32px, 7vw, 44px);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.option-btn:hover .option-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Texto do botão */
+.option-label {
+  margin-top: 8px;
+  font-size: clamp(12px, 2.8vw, 13px);
+  line-height: 18px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.2px;
+}
+
+/* Melhor visual para textos longos */
+.long-label {
+  line-height: 18px;
+}
+
+/* ---------- Responsividade adicional ---------- */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .home-card {
+    padding: 50px 40px;
+  }
+
+  .option-grid {
+    gap: clamp(16px, 3vw, 24px);
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 380px) {
+  .option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card {
+    max-width: 95%;
+    padding: 30px 20px;
+  }
+
+  .select-title {
+    margin: 20px 0 24px 0;
+  }
+}
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .home-card {
+    max-width: 480px;
+  }
+}

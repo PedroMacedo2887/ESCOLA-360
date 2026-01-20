@@ -1,0 +1,98 @@
+/* 
+  TEMA ESCOLA-360
+  Paleta de cores baseada no logo do projeto
+  Verde, Azul Navy e Turquesa
+*/
+
+:root {
+  /* Cores primárias - Paleta do logo */
+  --primary-green: #3cbb70;
+  --primary-navy: #1b3a52;
+  --primary-turquoise: #2ba5a0;
+  --primary-cyan: #40c4d4;
+
+  /* Gradiente principal - Verde para Turquesa */
+  --gradient-primary: linear-gradient(135deg, #3cbb70 0%, #2ba5a0 100%);
+  --gradient-full: linear-gradient(
+    135deg,
+    #3cbb70 0%,
+    #2ba5a0 50%,
+    #1b3a52 100%
+  );
+  --gradient-navy-cyan: linear-gradient(135deg, #1b3a52 0%, #40c4d4 100%);
+
+  /* Cores secundárias */
+  --dark-bg: #f5f5f5;
+  --light-bg: #ffffff;
+  --text-primary: #1b3a52;
+  --text-secondary: #4a5568;
+
+  /* Cores de status */
+  --success: #3cbb70;
+  --warning: #ffc107;
+  --danger: #f44336;
+  --info: #40c4d4;
+
+  /* Sombras com tonalidade da marca */
+  --shadow-sm: 0 2px 8px rgba(59, 187, 112, 0.15);
+  --shadow-md: 0 4px 12px rgba(59, 187, 112, 0.3);
+  --shadow-lg: 0 8px 20px rgba(59, 187, 112, 0.4);
+  --shadow-xl: 0 25px 70px rgba(59, 187, 112, 0.35);
+}
+
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--dark-bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* Botões reutilizáveis */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+/* Cards */
+.card {
+  background: var(--light-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Bordas e divisores */
+.border-primary {
+  border-left: 4px solid var(--primary-start);
+}
+
+.divider {
+  border-bottom: 3px solid var(--primary-start);
+}

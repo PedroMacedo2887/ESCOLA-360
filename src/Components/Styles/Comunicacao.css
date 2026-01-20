@@ -1,0 +1,366 @@
+.comunicacao {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comunicacao h2 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+/* Abas */
+.abas-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.aba-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #555;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.aba-btn:hover {
+  color: #667eea;
+}
+
+.aba-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Formulários */
+.nova-mensagem-form,
+.novo-aviso-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 4px solid #667eea;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-salvar,
+.btn-cancelar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-salvar {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-salvar:hover {
+  background: #45a049;
+}
+
+.btn-cancelar {
+  background: #f44336;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background: #da190b;
+}
+
+.btn-adicionar {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #3cbb70 0%, #2ba5a0 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 187, 112, 0.3);
+}
+
+.btn-adicionar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 187, 112, 0.4);
+}
+
+/* Mensagens */
+.mensagens-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensagem-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.mensagem-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-header {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.mensagem-icone {
+  font-size: 24px;
+}
+
+.mensagem-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.mensagem-destinatario {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.mensagem-status {
+  margin-left: auto;
+  background: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mensagem-conteudo {
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.mensagem-data {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Avisos */
+.avisos-lista {
+  display: grid;
+  gap: 15px;
+}
+
+.aviso-card {
+  background: white;
+  border-left: 5px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.aviso-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aviso-prioridade {
+  margin-bottom: 10px;
+}
+
+.prioridade-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.aviso-card h4 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.aviso-card p {
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.aviso-data {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Fórum */
+.forum-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.forum-post {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-autor {
+  font-weight: 700;
+  color: #333;
+}
+
+.post-data {
+  font-size: 12px;
+  color: #999;
+}
+
+.post-conteudo {
+  color: #666;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-acao {
+  padding: 6px 12px;
+  background: #45b7d1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-acao:hover {
+  background: #3a9aae;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .comunicacao {
+    padding: 15px;
+  }
+
+  .abas-container {
+    flex-direction: column;
+  }
+
+  .aba-btn {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .aba-btn.active {
+    border-bottom: none;
+    border-left-color: #667eea;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .mensagem-header {
+    flex-direction: column;
+  }
+
+  .mensagem-status {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,362 @@
+.comunicacao-aluno {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comunicacao-aluno h2 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+/* Abas */
+.abas-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.aba-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #555;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.aba-btn:hover {
+  color: #667eea;
+}
+
+.aba-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+/* Avisos */
+.avisos-lista {
+  display: grid;
+  gap: 15px;
+}
+
+.aviso-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.aviso-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aviso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.aviso-titulo-origem {
+  flex: 1;
+}
+
+.aviso-titulo-origem h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.origem-badge {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.prioridade-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.aviso-data {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.aviso-conteudo {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px 0;
+}
+
+.aviso-conteudo p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.aviso-conteudo.expanded {
+  max-height: none;
+}
+
+.btn-expandir {
+  background: #667eea;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-expandir:hover {
+  background: #764ba2;
+}
+
+/* Mensagens */
+.mensagens-lista {
+  display: grid;
+  gap: 15px;
+}
+
+.mensagem-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.mensagem-card.nao-lida {
+  background: #f0f8ff;
+  border-left-color: #45b7d1;
+}
+
+.mensagem-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.mensagem-dados strong {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.mensagem-assunto {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.novo-indicator {
+  display: inline-block;
+  color: #45b7d1;
+  font-size: 16px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.mensagem-conteudo {
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.mensagem-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mensagem-data {
+  font-size: 12px;
+  color: #999;
+}
+
+.btn-responder {
+  padding: 6px 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-responder:hover {
+  background: #45a049;
+}
+
+/* Fórum */
+.btn-novo-topico {
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-novo-topico:hover {
+  background: #764ba2;
+}
+
+.forum-topicos {
+  display: grid;
+  gap: 15px;
+}
+
+.topico-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.topico-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.topico-header h4 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.topico-disciplina {
+  background: #667eea;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.topico-autor {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.topico-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.topico-respostas {
+  color: #667eea;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topico-data {
+  color: #999;
+  font-size: 12px;
+}
+
+.btn-participa {
+  width: 100%;
+  padding: 10px;
+  background: #45b7d1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.btn-participa:hover {
+  background: #3a9aae;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .comunicacao-aluno {
+    padding: 15px;
+  }
+
+  .abas-container {
+    flex-direction: column;
+  }
+
+  .aba-btn {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .aba-btn.active {
+    border-bottom: none;
+    border-left-color: #667eea;
+  }
+
+  .aviso-header {
+    flex-direction: column;
+  }
+
+  .mensagem-header {
+    flex-direction: column;
+  }
+
+  .mensagem-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
